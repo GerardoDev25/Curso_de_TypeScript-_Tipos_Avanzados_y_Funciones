@@ -1,0 +1,24 @@
+{
+  "name": "ts-projects",
+  "version": "0.0.1",
+  "description": "Curso_de_TypeScript:_Tipos_Avanzados_y_Funciones platzi course",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GerardoDev25/Curso_de_TypeScript-_Tipos_Avanzados_y_Funciones.git"
+  },
+  "keywords": [],
+  "author": "Gerardo Miranda <gerardodev25@gmail.com> (https://github.com/GerardoDev25)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GerardoDev25/Curso_de_TypeScript-_Tipos_Avanzados_y_Funciones/issues"
+  },
+  "homepage": "https://github.com/GerardoDev25/Curso_de_TypeScript-_Tipos_Avanzados_y_Funciones#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "ts-node": "^10.9.1"
+  }
+}
