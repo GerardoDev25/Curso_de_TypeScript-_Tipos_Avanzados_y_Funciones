@@ -15,5 +15,7 @@ export interface CreateProductDTO
 // make all files like optionals
 export interface UpdateProductDto extends Partial<CreateProductDTO> {}
 
-// make read only to interface 
-export interface FindProductDto extends Readonly<Partial<Product>> {}
+// make read only to interface
+export interface FindProductDto extends Readonly<Partial<Omit<Product, 'tags'>>> {
+  readonly tags: ReadonlyArray<string>;
+}
