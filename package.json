@@ -19,6 +19,7 @@
   "homepage": "https://github.com/GerardoDev25/Curso_de_TypeScript-_Tipos_Avanzados_y_Funciones#readme",
   "devDependencies": {
     "typescript": "^4.8.4",
+    "@faker-js/faker": "^6.0.0-alpha.5",
     "ts-node": "^10.9.1"
   }
 }
