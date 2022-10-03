@@ -1,5 +1,5 @@
 import { Product } from './product.model';
-import { CreateProductDTO } from './product.dto';
+import { CreateProductDTO, UpdateProductDto } from './product.dto';
 import faker from '@faker-js/faker';
 
 export let products: Product[] = [];
@@ -22,13 +22,24 @@ export const addProduct = (data: CreateProductDTO): Product => {
   return newProduct;
 };
 
-export const updateProduct = (id: string, change: Product): Product | undefined => {
-  const index = products.find((prod, index) => prod.id === id && index);
-  if (typeof index == 'number') {
-    products[index] = change;
-    return products[index];
-  }
-  return undefined;
+// export const updateProduct = (id: string, change: Product): Product | undefined => {
+//   const index = products.find((prod, index) => prod.id === id && index);
+//   if (typeof index == 'number') {
+//     products[index] = change;
+//     return products[index];
+//   }
+//   return undefined;
+// };
+
+export const updateProduct = (id: string, change: UpdateProductDto): Product => {
+  const index = products.findIndex((product) => product.id === id);
+
+  products[index] = {
+    ...products[index],
+    ...change,
+  };
+
+  return products[index];
 };
 
 export const getProduct = (id: string): Product | undefined => {
